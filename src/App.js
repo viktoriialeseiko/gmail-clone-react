@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Header from './Header';
+import Sidebar from './Sidebar';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Mail from './Mail';
+import EmailList from './EmailList';
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <h2>gmail clone</h2>
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+
+        <div className="app__body">
+          <Sidebar />
+
+          <Switch>
+            <Route path='/mail'>
+              <Mail />
+            </Route>
+            <Route>
+              <EmailList path='/'/>
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 
