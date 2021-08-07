@@ -16,20 +16,11 @@ import './EmailList.css';
 import { db } from './firebase';
 
 function EmailList() {
-    //pease of state
+    //peace of state
     const [emails, setEmails] = useState([]);
-    //run this pease of code when component it runs once 
+    //run this peace of code when component runs once 
     useEffect(() => {
         //targetting the collection from database
-                                /* VAxfNJugURcPnqLn6k6b
-                                message
-                                "This is a test message!"
-                                subject
-                                "Test message"
-                                timestamp
-                                June 21, 2021 at 4:59:59 PM UTC-4
-                                to
-                                "annpermi@gmail.com" */
     db.collection('emails')
     .orderBy('timestamp', 'desc')
     .onSnapshot((snapshot) => setEmails (
