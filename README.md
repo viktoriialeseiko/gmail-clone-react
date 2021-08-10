@@ -11,11 +11,11 @@
 
 ## Built With:
 
-> React JS,
+> React JS
 
 > React Router, React Hook Forms
 
-> Redux,
+> Redux
 
 > HTML, CSS
 
